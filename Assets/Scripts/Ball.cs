@@ -32,9 +32,8 @@ public class Ball : MonoBehaviour
         //Left or right
         double x = Random.value < 0.5f ? -1.0f : 1.0;
         //Angled up or down
-        double y = Random.value < 0.5f ? Random.Range(-1.0f, -0.5f) :
-                                         Random.Range(0.5f, 1.0f);
-                                         
+        double y = Random.value < 0.5f ? Random.Range(-1.0f, -0.5f) : Random.Range(0.5f, 1.0f);
+                          
         Vector2 direction = new Vector2((float)x, (float)y);
         rb.AddForce(direction * this.startingSpeed);
     }
