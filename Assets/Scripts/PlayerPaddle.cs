@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerPaddle : Paddle
 {
-    //Keeps track of paddle direciton
     private Vector2 direction;
 
     //Called every frame of the game
@@ -22,11 +21,10 @@ public class PlayerPaddle : Paddle
     //Called fixed time intervals (associated with physics)
     private void FixedUpdate() 
     {
-        //Add movement when buttons are pressed
+        //Add force when buttons are pressed
         if (direction.sqrMagnitude != 0) {
             rb.AddForce(direction * this.speed);
         }
     }
-
 
 }
